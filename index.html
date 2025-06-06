@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced Stopwatch</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>⏱️ CLOCKCRAZE</h1><h4>STAY SHARP NEVER MISS A BEAT</h4><br>
+    <button onclick="toggleTheme()" id="theme-toggle">🌙 Dark Mode</button>
+
+    <div class="time" id="display">00:00:00:00</div>
+
+    <div class="buttons">
+      <button onclick="startStop()">▶️ Start</button>
+      <button onclick="pause()">⏸️ Pause</button>
+      <button onclick="stop()">⏹️ Stop</button>
+      <button onclick="reset()">🔁 Reset</button>
+      <button onclick="lap()">📍 Lap</button>
+      <button onclick="clearLaps()">🗑️ Clear Laps</button>
+    </div>
+     <div class="laps-container">
+      <ul id="laps"></ul>
+    </div>
+   
+  </div>
+
+  <!-- Audio Files -->
+<audio id="start-sound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
+<audio id="pause-sound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
+<audio id="stop-sound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
+<audio id="lap-sound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
+<audio id="reset-sound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
